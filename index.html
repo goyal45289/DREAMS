@@ -1,0 +1,257 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DREAMS | Disaster Response</title><style>
+:root{--bg:#0b1220;--panel:#142239;--line:#2b405c;--txt:#eaf1fa;--muted:#9aacc1;--blue:#5aa9ff;--green:#4bd09b;--amber:#f3bd58;--red:#ff7183}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:14px Segoe UI,Arial,sans-serif}.app{display:grid;grid-template-columns:225px 1fr;min-height:100vh}.side{background:#091321;border-right:1px solid var(--line);padding:22px 14px}.brand{font-size:20px;font-weight:800;letter-spacing:3px;padding:5px 10px 25px}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:2px}.nav button{display:block;width:100%;text-align:left;background:none;color:#b9c8d9;border:0;padding:12px;border-radius:8px;margin:4px 0;cursor:pointer}.nav button.active,.nav button:hover{background:#1c304a;color:white}.side p{font-size:11px;color:var(--muted);margin-top:40px;padding:10px}.main{padding:25px;max-width:1500px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.top h1{margin:2px 0;font-size:25px}.muted{color:var(--muted)}.btn{background:#203650;border:1px solid #35516f;color:white;padding:9px 13px;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block}.primary{background:#287bd4;border-color:#287bd4}.danger{background:#482531;border-color:#754052}.grid{display:grid;gap:14px}.stats{grid-template-columns:repeat(4,1fr)}.card{background:linear-gradient(145deg,#172841,#101c2e);border:1px solid var(--line);border-radius:13px;padding:16px}.stat span{color:var(--muted);font-size:12px}.stat b{font-size:30px;display:block;margin:7px 0}.two{grid-template-columns:1.3fr 1fr;margin:15px 0}.page{display:none}.page.active{display:block}.table{width:100%;border-collapse:collapse}.table th,.table td{text-align:left;padding:12px;border-bottom:1px solid var(--line);font-size:12px}.table th{color:var(--muted);font-size:10px;letter-spacing:1px}.tag{border-radius:20px;padding:4px 8px;font-size:10px;background:#263d5b}.tag.CRITICAL{background:#582b38;color:#ffb2bd}.tag.HIGH{background:#59421f;color:#ffdc9b}.tag.MEDIUM{background:#24466b;color:#b9d9ff}.tag.LOW{background:#204b3d;color:#a5f0d0}.tag.PENDING{background:#59421f;color:#ffdc9b}.tag.ASSIGNED{background:#24466b;color:#b9d9ff}.tag.COMPLETED{background:#204b3d;color:#a5f0d0}.field{display:grid;gap:5px;margin:10px 0}.field input,.field select,.search{background:#0b1728;color:white;border:1px solid #3a506d;border-radius:8px;padding:10px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.map{height:270px;background:linear-gradient(90deg,#29405a33 1px,transparent 1px),linear-gradient(#29405a33 1px,transparent 1px);background-size:30px 30px;border-radius:10px}.map svg{width:100%;height:100%}.feed{font-size:12px;line-height:1.8;color:#c3d0df}.filelayout{display:grid;grid-template-columns:260px 1fr;gap:13px}.filelist{display:grid;gap:5px;margin-top:10px}.filebtn{background:#0d1a2c;color:#dce8f5;border:1px solid transparent;text-align:left;border-radius:8px;padding:10px;cursor:pointer}.filebtn.active,.filebtn:hover{background:#1c3552;border-color:#4c739b}.code{background:#081321;color:#d9e7f5;white-space:pre;overflow:auto;max-height:570px;padding:17px;border-radius:0 0 10px 10px;font:12px/1.6 Consolas,monospace}.codehead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}.arch{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:13px 0}.arch div{background:#142841;border:1px solid var(--line);border-radius:8px;padding:10px;font-size:11px}.arch b{display:block}.note{background:#172e47;border:1px solid #345775;padding:12px;border-radius:9px;color:#c4ddf5;margin:12px 0;font-size:12px}.toast{position:fixed;bottom:20px;right:20px;z-index:9999;max-width:min(420px,calc(100vw - 32px));padding:14px 16px;border:1px solid #367b60;border-left:5px solid #35d39a;border-radius:10px;background:#173d32;color:#f4fff9;box-shadow:0 12px 35px #0008;display:none}.toast.show{display:block;animation:toastIn .2s ease-out}.toast .toast-title{font-weight:800;letter-spacing:.4px}.toast .toast-detail{font-size:12px;margin-top:4px;color:#e1edf0}.toast.CRITICAL{background:#541f2b;border-color:#ff526b;border-left-color:#ff526b}.toast.HIGH{background:#573719;border-color:#ff9f43;border-left-color:#ff9f43}.toast.MEDIUM{background:#4e461c;border-color:#f2d34f;border-left-color:#f2d34f}.toast.LOW{background:#174536;border-color:#42d6a0;border-left-color:#42d6a0}@keyframes toastIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.sim-panel{margin:0 0 15px;padding:16px;background:linear-gradient(120deg,#142d46,#142239);border:1px solid #365575;border-radius:13px}.sim-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.sim-title{font-weight:750;font-size:14px}.sim-sub{color:var(--muted);font-size:11px;margin-top:4px}.sim-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:13px}.sim-controls select{background:#0b1728;color:white;border:1px solid #3a506d;border-radius:8px;padding:9px}.sim-status{display:inline-flex;align-items:center;gap:7px;font-size:11px;color:var(--muted)}.sim-dot{width:8px;height:8px;border-radius:50%;background:#7f91a8}.sim-dot.running{background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 1.3s infinite}@keyframes pulse{50%{opacity:.35}}.sim-feed{max-height:145px;overflow:auto;display:grid;gap:7px;margin-top:12px}.sim-event{padding:8px 10px;background:#0c1a2b;border:1px solid #2a4059;border-radius:8px;font-size:11px}.sim-event b{color:#ffd18a}.sim-event small{color:var(--muted);display:block;margin-top:2px}.btn:disabled{opacity:.45;cursor:not-allowed}@media(max-width:800px){.app{grid-template-columns:1fr}.side{padding:10px}.brand{padding-bottom:8px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;width:auto}.side p{display:none}.main{padding:14px}.stats{grid-template-columns:repeat(2,1fr)}.two,.filelayout{grid-template-columns:1fr}.arch{grid-template-columns:repeat(2,1fr)}}
+
+/* Command-centre visual refresh */
+:root{--bg:#111820;--panel:#202a33;--line:#34424b;--txt:#edf4f3;--muted:#a2b0b5;--teal:#20d2c0;--amber:#ffb84d;--red:#ff6578}
+body{background:radial-gradient(ellipse at 75% 100%,#123b45 0,transparent 38%),#111820;color:var(--txt);font-family:Inter,"Segoe UI",Arial,sans-serif}
+.app{grid-template-columns:205px minmax(0,1fr);background:transparent}
+.side{background:#151d24;border-right:1px solid #2b3941;padding:24px 13px}
+.brand{color:#f4fbfa;letter-spacing:3px}.brand:before{content:"";display:inline-block;width:9px;height:24px;background:var(--teal);margin-right:9px;vertical-align:middle;border-radius:2px}.brand small{letter-spacing:1.5px}
+.nav button{color:#aab9bd;border-radius:7px;padding:11px}.nav button.active,.nav button:hover{background:#243b40;color:#fff;border-left:3px solid var(--teal)}
+.main{max-width:1600px;padding:25px 28px}.top{border-bottom:1px solid #2a3941;padding-bottom:17px;margin-bottom:18px}.top h1{font-size:22px;letter-spacing:.2px}.top .muted{color:#8ea1a7}
+.card{background:linear-gradient(145deg,#242f38,#1d2730);border:1px solid #394750;border-radius:9px;box-shadow:0 12px 35px #0002;padding:15px}
+.btn{background:#293943;border:1px solid #465a63;border-radius:6px}.primary{background:#0e9e91;border-color:#16c6b6;color:#041d1b}.danger{background:#482531}
+.command-strip{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:0 0 16px}.command-strip h2{font-size:19px;margin:5px 0}.command-strip p{font-size:11px;margin:0}.eyebrow,.panel-kicker{font-size:9px;letter-spacing:1.5px;color:#91a5aa;font-weight:700}.live-chip{font-size:9px;letter-spacing:1px;color:#b9d4d1;border:1px solid #3d5559;padding:9px 12px;border-radius:5px;white-space:nowrap}.live-chip i{display:inline-block;width:7px;height:7px;background:var(--teal);border-radius:50%;margin-right:7px;box-shadow:0 0 9px var(--teal)}
+.command-grid{display:grid;grid-template-columns:minmax(210px,.9fr) minmax(360px,1.65fr) minmax(205px,.8fr);gap:13px;align-items:stretch}.left-stack,.right-stack{display:grid;gap:13px;align-content:start}.location-card h3{font-size:15px;margin:8px 0}.location-name{background:#303d45;padding:8px;border-radius:5px;font-size:11px;color:#d5e2e0}.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:13px}.mini-stats div{border-right:1px solid #3a4a51}.mini-stats div:last-child{border:0}.mini-stats span{display:block;color:#8fa2a7;font-size:8px;letter-spacing:.6px}.mini-stats b{font-size:20px;display:block;margin-top:5px}
+.panel-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}.panel-head b{font-size:12px}.panel-head .muted{font-size:9px}.rings{display:flex;justify-content:space-around;gap:10px}.ring-wrap{display:grid;justify-items:center;gap:6px}.ring-wrap>span{font-size:9px;color:#c5d1d2;letter-spacing:.8px}.ring-wrap small{font-size:9px;color:#84999e}.ring{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;position:relative;background:conic-gradient(var(--teal) 0deg,#3b4a50 0deg)}.ring:before{content:"";position:absolute;inset:6px;background:#202b33;border-radius:50%}.ring b{z-index:1;font-size:17px}.ring-orange{background:conic-gradient(var(--amber) 0deg,#3b4a50 0deg)}
+.sim-card p{font-size:10px;margin:0 0 10px}.sim-controls{display:flex;gap:5px;flex-wrap:wrap;margin:0}.sim-controls select{background:#111d25;color:#e9f5f2;border:1px solid #46565d;border-radius:5px;padding:8px;font-size:10px}.sim-controls .btn{font-size:10px;padding:8px}.auto-label{display:flex;align-items:center;gap:5px;color:#a5b4b8;font-size:9px;margin-top:9px}.sim-status{font-size:8px;color:#9aabad}.sim-dot{width:7px;height:7px;border-radius:50%;background:#71858b;display:inline-block}.sim-dot.running{background:var(--teal);box-shadow:0 0 8px var(--teal)}
+.sim-feed{max-height:82px;overflow:auto;display:grid;gap:5px;margin-top:9px}.sim-event{background:#17232b;border:1px solid #35464d;border-radius:5px;padding:7px;font-size:9px}.sim-event small{font-size:8px}
+.map-card{min-width:0}.map-large{height:335px;margin-top:8px;overflow:hidden;background:#172b37}.map-large svg{width:100%;height:100%}.map-legend{font-size:9px;color:#aab9ba}.map-legend i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:5px}.zone-legend{display:flex;gap:15px;flex-wrap:wrap;padding:11px 0 5px;color:#9eb0b2;font-size:9px}.zone-legend i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:4px}.za{background:#20d2c0}.zb{background:#ffb84d}.zc{background:#4ca8ff}.zd{background:#df79e7}.map-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid #34444b;padding-top:9px;color:#8fa1a6;font-size:9px}.map-foot .btn{font-size:9px;padding:6px 8px}
+.population-card{text-align:center}.big-number{font-size:35px;font-weight:700;margin:6px 0 0;color:#f4fbf8}.population-card .muted{font-size:9px}.load-meter{height:5px;background:#3b4a50;border-radius:9px;margin:13px 0 10px;overflow:hidden}.load-meter i{display:block;width:0;height:100%;background:var(--teal);border-radius:9px}.load-break{display:flex;justify-content:space-between;color:#91a4a8;font-size:9px}.load-break b{color:#eaf5f2;margin-left:4px}
+.alert-dots{color:var(--teal);font-size:10px;letter-spacing:2px}.risk-list{display:grid;gap:7px}.risk-row{display:flex;align-items:center;gap:8px;padding:8px;background:#17232b;border:1px solid #35434a;border-radius:5px;font-size:9px;color:#b9c6c7}.risk-row b{margin-left:auto;color:#f1f8f6;font-size:12px}.risk-dot{width:7px;height:7px;border-radius:50%}.critical{background:#ff667a}.high{background:#ffb84d}.medium{background:#4da9ff}.low{background:#20d2c0}.alert-feed{border-top:1px solid #34434a;margin-top:10px;padding-top:8px;color:#9eb0b2;font-size:9px;line-height:1.8;max-height:110px;overflow:auto}
+.bottom-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:13px;margin-top:13px}.chart-card,.queue-card{min-width:0}.bar-chart{height:135px;display:flex;align-items:end;justify-content:space-around;gap:15px;padding:12px 10px 0;border-bottom:1px solid #536168;background:repeating-linear-gradient(to bottom,transparent 0,transparent 32px,#34434a 33px)}.bar-col{height:100%;display:flex;flex:1;flex-direction:column;justify-content:end;align-items:center;gap:7px}.bar-col i{display:block;width:min(35px,65%);min-height:3px;background:linear-gradient(#28d6c4,#13998f);border-radius:4px 4px 0 0;transition:height .3s}.bar-col span{font-size:8px;color:#91a5a8;white-space:nowrap}.queue-card .table th,.queue-card .table td{padding:9px 7px}.queue-card .table td{font-size:10px}
+.page .card h2{font-size:18px}.field input,.field select,.search{background:#111d25;border-color:#40535c}
+@media(max-width:1100px){.command-grid{grid-template-columns:minmax(190px,.8fr) minmax(330px,1.5fr)}.right-stack{grid-column:1/-1;grid-template-columns:1fr 1.4fr}.bottom-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.app{grid-template-columns:1fr}.side{padding:10px}.brand{padding-bottom:8px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;width:auto}.side p{display:none}.main{padding:14px}.command-grid{grid-template-columns:1fr}.right-stack{grid-column:auto;grid-template-columns:1fr}.map-large{height:260px}.command-strip{align-items:flex-start;flex-direction:column}.bottom-grid{grid-template-columns:1fr}.map-foot{align-items:flex-start;flex-direction:column}.stats{grid-template-columns:repeat(2,1fr)}}
+
+
+.firebase-sync-status{display:inline-flex;align-items:center;gap:8px;margin:0 0 10px;padding:7px 11px;border:1px solid #3b535c;border-radius:20px;background:#14252d;color:#c5d8d8;font-size:11px}
+.firebase-sync-status i{width:8px;height:8px;border-radius:50%;background:#e6b34e;display:inline-block}
+.firebase-sync-status.connected i{background:#35d39a;box-shadow:0 0 8px #35d39a}
+.firebase-sync-status.error i{background:#ff647a;box-shadow:0 0 8px #ff647a}
+
+</style><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/><style>#cityMap{height:335px;width:100%;border-radius:12px;z-index:1;background:#172b37}.leaflet-container{font:12px Segoe UI,Arial}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#142239;color:#eaf1fa}.leaflet-control-attribution{font-size:9px}</style></head><body><div class="app"><aside class="side"><div class="brand">DREAMS<small>DISASTER RESPONSE COMMAND</small></div><nav class="nav"><button class="active" data-page="dashboard">▦ Overview</button><button data-page="register">＋ Report incident</button><button data-page="incidents">⚑ Disaster board</button><button data-page="resources">✚ Resources</button><button data-page="network">⌘ City network</button><button data-page="source">{ } C++ source files</button></nav><p>● Local browser demo<br><br>Sample zones and emergency fleet. Not connected to live services.</p></aside><main class="main"><div id="firebaseSyncStatus" class="firebase-sync-status"><i></i><span>Connecting to shared DREAMS database…</span></div><div class="top"><div><div class="muted" style="font-size:10px;letter-spacing:2px">EMERGENCY OPERATIONS PLATFORM</div><h1 id="title">Command overview</h1></div><button class="btn primary" onclick="go('register')">＋ New incident</button></div>
+<section class="page active" id="dashboard">
+  <div class="command-strip">
+    <div><span class="eyebrow">LIVE OPERATIONS / CITY RESPONSE NETWORK</span><h2>Incident Tracking Center</h2><p class="muted">Monitor incoming emergencies, dispatch resources and coordinate response.</p></div>
+    <div class="live-chip"><i></i> LOCAL DEMO · LIVE UPDATES</div>
+  </div>
+  <div class="command-grid">
+    <div class="left-stack">
+      <div class="card location-card">
+        <div class="panel-kicker">⌖ RESPONSE AREA</div><h3>City Operations</h3><div class="location-name">◉ &nbsp; All response zones</div>
+        <div class="mini-stats">
+          <div><span>INCIDENTS</span><b id="total">0</b></div>
+          <div><span>ACTIVE</span><b id="deployed">0</b></div>
+          <div><span>COMPLETED</span><b id="done">0</b></div>
+        </div>
+      </div>
+      <div class="card ring-card">
+        <div class="panel-head"><b>Response readiness</b><span class="muted">Fleet status</span></div>
+        <div class="rings">
+          <div class="ring-wrap"><div class="ring ring-orange" id="readyRing"><b id="readyPct">100%</b></div><span>AVAILABLE</span><small id="readyLabel">3 of 3 units</small></div>
+          <div class="ring-wrap"><div class="ring ring-teal" id="activeRing"><b id="activePct">0%</b></div><span>DEPLOYED</span><small id="activeLabel">0 of 3 units</small></div>
+        </div>
+      </div>
+      <div class="card sim-card">
+        <div class="panel-head"><b>Surprise simulation</b><span class="sim-status"><i class="sim-dot" id="simDot"></i><b id="simStatus">STOPPED</b></span></div>
+        <p class="muted">Random incidents arrive without warning.</p>
+        <div class="sim-controls">
+          <button class="btn primary" id="simStart" onclick="startSimulation()">▶ Start</button>
+          <button class="btn" id="simPause" onclick="pauseSimulation()" disabled>Ⅱ Pause</button>
+          <select id="simPace" aria-label="Event frequency"><option value="slow">Slow</option><option value="normal" selected>Normal</option><option value="fast">Intense</option></select>
+        </div>
+        <label class="auto-label"><input type="checkbox" id="autoComplete" checked> Auto-complete missions</label>
+        <div class="sim-feed" id="simFeed"><div class="sim-event">Simulation ready. Start to receive surprise incidents.</div></div>
+      </div>
+    </div>
+    <div class="card map-card">
+      <div class="panel-head"><div><div class="panel-kicker">GEOGRAPHIC OVERVIEW</div><b>City response map</b></div><span class="map-legend"><i></i> ZONES</span></div>
+      <div class="map map-large"><div id="cityMap" role="application" aria-label="Interactive OpenStreetMap of Patiala"></div></div>
+      <div class="zone-legend"><span><i class="za"></i> Zone A</span><span><i class="zb"></i> Zone B</span><span><i class="zc"></i> Zone C</span><span><i class="zd"></i> Zone D</span></div>
+      <div class="map-foot"><span>OpenStreetMap · Patiala, Punjab · Zone pins are illustrative demo anchors</span><button class="btn" onclick="go('network')">View road network →</button></div>
+    </div>
+    <div class="right-stack">
+      <div class="card population-card"><div class="panel-kicker">INCIDENT LOAD</div><div class="big-number" id="loadNumber">0</div><span class="muted">registered incidents</span><div class="load-meter"><i id="loadMeter"></i></div><div class="load-break"><span>Pending <b id="pending">0</b></span><span>Resolved <b id="resolvedMini">0</b></span></div></div>
+      <div class="card alerts-card"><div class="panel-head"><b>Risk notifications</b><span class="alert-dots">● ● ●</span></div><div id="riskCounts" class="risk-list"><div class="risk-row"><i class="risk-dot critical"></i><span>CRITICAL</span><b>0</b></div><div class="risk-row"><i class="risk-dot high"></i><span>HIGH</span><b>0</b></div><div class="risk-row"><i class="risk-dot medium"></i><span>MEDIUM</span><b>0</b></div><div class="risk-row"><i class="risk-dot low"></i><span>LOW</span><b>0</b></div></div><div class="alert-feed" id="activity">No activity yet.</div></div>
+    </div>
+  </div>
+  <div class="bottom-grid">
+    <div class="card chart-card"><div class="panel-head"><div><div class="panel-kicker">INCIDENT DISTRIBUTION</div><b>Incident categories</b></div><span class="muted">Live count</span></div><div id="categoryChart" class="bar-chart"><div class="bar-col"><i style="height:4%"></i><span>FLOOD</span></div><div class="bar-col"><i style="height:4%"></i><span>FIRE</span></div><div class="bar-col"><i style="height:4%"></i><span>QUAKE</span></div><div class="bar-col"><i style="height:4%"></i><span>MEDICAL</span></div></div></div>
+    <div class="card queue-card"><div class="panel-head"><div><div class="panel-kicker">NEXT TO DISPATCH</div><b>Priority queue</b></div><button class="btn" onclick="go('incidents')">Open board →</button></div><table class="table"><thead><tr><th>ID</th><th>TYPE</th><th>RISK</th><th>STATUS</th></tr></thead><tbody id="priority"></tbody></table></div>
+  </div>
+</section>
+<section class="page" id="register"><div class="card" style="max-width:760px"><h2>Report a disaster</h2><p class="muted">Enter incident details. Severity is assessed automatically.</p><form id="form"><div class="formgrid"><label class="field">Disaster type<select id="type"><option>Flood</option><option>Fire</option><option>Earthquake</option><option>Medical Emergency</option></select></label><label class="field">Zone<select id="zone"><option>Zone A</option><option>Zone B</option><option>Zone C</option><option>Zone D</option></select></label><label class="field">People affected<input id="affected" type="number" min="0" value="100"></label><label class="field">Injured<input id="injured" type="number" min="0" value="10"></label><label class="field">Trapped<input id="trapped" type="number" min="0" value="0"></label><label class="field">Severity preview<input id="preview" readonly></label></div><button class="btn primary">Assess and dispatch</button></form></div></section>
+<section class="page" id="incidents"><div class="card"><h2>Disaster board</h2><div class="actions"><select id="filter" class="search" onchange="render()"><option>ALL</option><option>PENDING</option><option>ASSIGNED</option><option>COMPLETED</option></select><select id="severitySort" class="search" aria-label="Sort incidents by severity" onchange="render()"><option value="high">Severity: High to Low</option><option value="low">Severity: Low to High</option><option value="none">Default order</option></select><button class="btn" onclick="retry()">↻ Retry pending</button><button class="btn" onclick="demo()">▶ Demo batch</button><button class="btn danger" onclick="resetAll()">Reset demo</button></div><div style="overflow:auto"><table class="table"><thead><tr><th>ID</th><th>TYPE</th><th>ZONE</th><th>SEVERITY</th><th>STATUS</th><th>RESOURCE</th><th>ACTION</th></tr></thead><tbody id="incRows"></tbody></table></div></div></section>
+<section class="page" id="resources"><div class="card"><h2>Emergency fleet</h2><p class="muted">Resources are released when a mission is completed.</p><div id="fleet" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div></div></section>
+<section class="page" id="network"><div class="card"><h2>City road network</h2><p class="muted">Two-way roads and distances used by Dijkstra's algorithm.</p><table class="table"><tr><th>ROAD</th><th>DISTANCE</th></tr><tr><td>Zone A ↔ Zone B</td><td>5 km</td></tr><tr><td>Zone A ↔ Zone C</td><td>10 km</td></tr><tr><td>Zone B ↔ Zone C</td><td>3 km</td></tr><tr><td>Zone B ↔ Zone D</td><td>7 km</td></tr><tr><td>Zone C ↔ Zone D</td><td>2 km</td></tr></table></div></section>
+<section class="page" id="source"><h2>C++ source explorer</h2><p class="muted">Browse the seven C++ files included in this project. Select a file to read it.</p><div class="note"><b>Where are the files on your computer?</b> Extract the downloaded website ZIP. Open the <code>AIDRIS_Web/cpp/</code> folder. It contains <b>main.cpp</b> and six <b>.h</b> header files. The panel below previews the same files.</div><div class="arch"><div><b>main.cpp</b>Application entry</div><div><b>DisasterManager.h</b>System integration</div><div><b>PriorityManager.h</b>Incident priority</div><div><b>ResourceAllocator.h</b>Resource matching</div></div><div class="filelayout"><div class="card"><b>PROJECT FILES · 7</b><input class="search" id="searchFiles" placeholder="Search files..." oninput="filterFiles()" style="width:100%;margin-top:10px"><div class="filelist" id="filelist"></div></div><div class="card" style="padding:12px;min-width:0"><div class="codehead"><div><b id="filename">main.cpp</b><div class="muted" id="filepath" style="font-size:10px">AIDRIS_Web/cpp/main.cpp</div></div><div class="actions"><button class="btn" onclick="copyCode()">Copy code</button><a class="btn" id="downloadFile" href="cpp/main.cpp" download>Download file ↓</a></div></div><p id="filedesc" class="muted" style="font-size:11px"></p><pre class="code"><code id="code"></code></pre></div></div><div class="actions"><a class="btn primary" href="cpp/AIDRIS_CPP_Source.zip" download>↓ Download all C++ files</a></div></section>
+<p class="muted" style="font-size:10px;margin-top:25px">DREAMS educational prototype · Sample data only · Not connected to live emergency services</p></main></div><div class="toast" id="toast"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+const SOURCE={"main.cpp": {"desc": "Application entry point: interactive terminal menu and user input.", "code": "#include <iostream>\n#include \"DisasterManager.h\"\nint main(){ DisasterManager aidris; int c=0; do { std::cout<<\"\\nAIDRIS DISASTER RESPONSE\\n1. Register demo incident\\n2. Show incidents (default)\\n3. Show resources\\n4. Complete mission\\n5. Show incidents sorted by severity\\n0. Exit\\nChoice: \"; std::cin>>c; if(c==1){ std::string t,z; int a,i,tr; std::cout<<\"Type (Fire/Flood/Earthquake/Medical Emergency): \";std::cin>>t;std::cout<<\"Zone (A/B/C/D): \";std::cin>>z;std::cout<<\"Affected injured trapped: \";std::cin>>a>>i>>tr;aidris.report(t,a,i,tr,\"Zone \"+z);} else if(c==2)aidris.showDisasters(); else if(c==3)aidris.showResources(); else if(c==5)aidris.showDisastersSorted(); else if(c==4){int id;std::cout<<\"Incident ID: \";std::cin>>id;aidris.complete(id);} }while(c!=0); }\n"}, "Disaster.h": {"desc": "Disaster model: incident details, severity rules and lifecycle status.", "code": "#ifndef DISASTER_H\n#define DISASTER_H\n#include <string>\nstruct Disaster { enum Status{PENDING,ASSIGNED,COMPLETED}; int id,affected,injured,trapped,resourceId; std::string type,zone; Status status; Disaster(int n,std::string t,int a,int i,int tr,std::string z):id(n),affected(a),injured(i),trapped(tr),resourceId(-1),type(t),zone(z),status(PENDING){} int priority()const{if(trapped>=50||injured>=100||affected>=1000)return 4;if(trapped>=20||injured>=50||affected>=500)return 3;if(trapped>=5||injured>=10||affected>=100)return 2;return 1;} std::string severity()const{switch(priority()){case 4:return \"CRITICAL\";case 3:return \"HIGH\";case 2:return \"MEDIUM\";default:return \"LOW\";}} };\n#endif\n"}, "PriorityManager.h": {"desc": "Priority queue: highest severity first; lower incident ID breaks ties.", "code": "#ifndef PRIORITY_MANAGER_H\n#define PRIORITY_MANAGER_H\n#include <queue>\n#include <vector>\n#include \"Disaster.h\"\nstruct DisasterOrder{bool operator()(const Disaster&a,const Disaster&b)const{return a.priority()==b.priority()?a.id>b.id:a.priority()<b.priority();}};\nclass PriorityManager{std::priority_queue<Disaster,std::vector<Disaster>,DisasterOrder> q;public:void push(const Disaster&d){q.push(d);}bool empty()const{return q.empty();}Disaster pop(){Disaster d=q.top();q.pop();return d;}};\n#endif\n"}, "Resource.h": {"desc": "Resource model: ID, resource type, current zone and availability.", "code": "#ifndef RESOURCE_H\n#define RESOURCE_H\n#include <string>\nstruct Resource{int id;std::string type,zone;bool available;int incident;Resource(int n,std::string t,std::string z):id(n),type(t),zone(z),available(true),incident(-1){} void assign(int d){available=false;incident=d;}void release(std::string z){available=true;incident=-1;zone=z;}};\n#endif\n"}, "ResourceAllocator.h": {"desc": "Resource selection: matches type and picks the closest available unit.", "code": "#ifndef RESOURCE_ALLOCATOR_H\n#define RESOURCE_ALLOCATOR_H\n#include <vector>\n#include \"Resource.h\"\n#include \"Disaster.h\"\n#include \"CityGraph.h\"\nclass ResourceAllocator{public:int choose(Disaster&d,std::vector<Resource>&rs,const CityGraph&g,std::vector<std::string>&p,int&km){std::string need=d.type==\"Fire\"?\"Fire Truck\":d.type==\"Medical Emergency\"?\"Ambulance\":\"Rescue Team\";int best=-1,bestKm=1000000;for(int i=0;i<(int)rs.size();++i)if(rs[i].available&&rs[i].type==need){std::vector<std::string>path;int dist;if(g.route(rs[i].zone,d.zone,path,dist)&&dist<bestKm){best=i;bestKm=dist;p=path;}}if(best>=0){rs[best].assign(d.id);d.resourceId=rs[best].id;km=bestKm;}return best;}};\n#endif\n"}, "CityGraph.h": {"desc": "Road graph: weighted connections and Dijkstra shortest path.", "code": "#ifndef CITY_GRAPH_H\n#define CITY_GRAPH_H\n#include <string>\n#include <vector>\n#include <map>\n#include <queue>\n#include <limits>\n#include <algorithm>\nclass CityGraph{std::map<std::string,std::vector<std::pair<std::string,int>>> g;public:CityGraph(){road(\"Zone A\",\"Zone B\",5);road(\"Zone A\",\"Zone C\",10);road(\"Zone B\",\"Zone C\",3);road(\"Zone B\",\"Zone D\",7);road(\"Zone C\",\"Zone D\",2);}void road(std::string a,std::string b,int w){g[a].push_back({b,w});g[b].push_back({a,w});}bool route(std::string s,std::string t,std::vector<std::string>&p,int&cost) const{using N=std::pair<int,std::string>;std::priority_queue<N,std::vector<N>,std::greater<N>>q;std::map<std::string,int>d;std::map<std::string,std::string>prev;for(auto&x:g)d[x.first]=std::numeric_limits<int>::max();if(!d.count(s)||!d.count(t))return false;d[s]=0;q.push({0,s});while(!q.empty()){auto x=q.top();q.pop();if(x.first!=d[x.second])continue;for(auto&e:g.find(x.second)->second)if(d[x.second]+e.second<d[e.first]){d[e.first]=d[x.second]+e.second;prev[e.first]=x.second;q.push({d[e.first],e.first});}}if(d[t]==std::numeric_limits<int>::max())return false;cost=d[t];for(std::string u=t;;u=prev[u]){p.push_back(u);if(u==s)break;}std::reverse(p.begin(),p.end());return true;}};\n#endif\n"}, "DisasterManager.h": {"desc": "Integration hub: registers incidents, dispatches, retains pending incidents and releases resources.", "code": "#ifndef DISASTER_MANAGER_H\n#define DISASTER_MANAGER_H\n#include <iostream>\n#include <vector>\n#include <algorithm>\n#include \"Disaster.h\"\n#include \"Resource.h\"\n#include \"PriorityManager.h\"\n#include \"ResourceAllocator.h\"\nclass DisasterManager{std::vector<Disaster>d;std::vector<Resource>r;CityGraph map;ResourceAllocator allocator;int next=1;void dispatch(){PriorityManager q;for(auto&x:d)if(x.status==Disaster::PENDING)q.push(x);while(!q.empty()){Disaster x=q.pop();std::vector<std::string>p;int km=0,k=allocator.choose(x,r,map,p,km);if(k<0)continue;for(auto&v:d)if(v.id==x.id){v.status=Disaster::ASSIGNED;v.resourceId=r[k].id;}std::cout<<\"Dispatch incident #\"<<x.id<<\" via \";for(auto&z:p)std::cout<<z<<\" \";std::cout<<\"(\"<<km<<\" km)\\n\";}}public:DisasterManager(){r.emplace_back(101,\"Ambulance\",\"Zone A\");r.emplace_back(102,\"Fire Truck\",\"Zone B\");r.emplace_back(103,\"Rescue Team\",\"Zone C\");}void report(std::string t,int a,int i,int tr,std::string z){d.emplace_back(next++,t,a,i,tr,z);std::cout<<\"Reported #\"<<next-1<<\" severity \"<<d.back().severity()<<\"\\n\";dispatch();}void complete(int id){for(auto&x:d)if(x.id==id&&x.status==Disaster::ASSIGNED){for(auto&v:r)if(v.id==x.resourceId)v.release(x.zone);x.status=Disaster::COMPLETED;std::cout<<\"Completed #\"<<id<<\"; resource released.\\n\";dispatch();return;}std::cout<<\"No assigned incident with that ID.\\n\";}void showDisasters(){for(auto&x:d)std::cout<<\"#\"<<x.id<<\" \"<<x.type<<\" \"<<x.zone<<\" \"<<x.severity()<<\" status=\"<<(x.status==0?\"PENDING\":x.status==1?\"ASSIGNED\":\"COMPLETED\")<<\"\\n\";}void showDisastersSorted(){std::vector<Disaster> sorted=d;std::sort(sorted.begin(),sorted.end(),[](const Disaster&a,const Disaster&b){return a.priority()==b.priority()?a.id<b.id:a.priority()>b.priority();});for(const auto&x:sorted)std::cout<<\"#\"<<x.id<<\" \"<<x.type<<\" \"<<x.zone<<\" \"<<x.severity()<<\" status=\"<<(x.status==0?\"PENDING\":x.status==1?\"ASSIGNED\":\"COMPLETED\")<<\"\\n\";}void showResources(){for(auto&x:r)std::cout<<\"#\"<<x.id<<\" \"<<x.type<<\" \"<<x.zone<<\" \"<<(x.available?\"AVAILABLE\":\"DEPLOYED\")<<\"\\n\";}};\n#endif\n"}};
+let incidents=[],fleet=[{id:101,type:'Ambulance',zone:'Zone A',available:true},{id:102,type:'Fire Truck',zone:'Zone B',available:true},{id:103,type:'Rescue Team',zone:'Zone C',available:true}],activity=[],next=1,latest=[];
+// Shared-state bridge used by the Firebase module below.
+window.aidrisGetSharedState = () => ({
+  incidents: incidents.map(d => ({...d})),
+  fleet: fleet.filter(r => r && typeof r === "object" && Number.isFinite(Number(r.id))).map(r => ({
+    id: Number(r.id), type: String(r.type || ""), zone: String(r.zone || ""),
+    available: Boolean(r.available), ...(r.incident == null ? {} : {incident: Number(r.incident)})
+  })),
+  activity: activity.map(item => ({t: String(item.t || ""), d: String(item.d || "")})),
+  next, latest: Array.isArray(latest) ? [...latest] : []
+});
+let remoteStateInitialized = false;
+window.aidrisApplySharedState = (data) => {
+  if (!data) return;
+  // Realtime Database may return numeric-key objects instead of JS arrays.
+  const toList = (value) => {
+    if (Array.isArray(value)) return value;
+    if (!value || typeof value !== "object") return [];
+    return Object.keys(value)
+      .filter(key => /^(0|[1-9]\d*)$/.test(key))
+      .sort((a,b) => Number(a)-Number(b))
+      .map(key => value[key]);
+  };
+  const remoteIncidents = toList(data.incidents).filter(item => item && typeof item === "object");
+  const remoteFleet = toList(data.fleet).filter(item => item && typeof item === "object" && Number.isFinite(Number(item.id)));
+  if (!remoteFleet.length) return;
+  // Alert only for incidents newly received from another browser after initial sync.
+  const previousIds = new Set(incidents.map(item => String(item.id)));
+  const newRemoteIncidents = remoteStateInitialized
+    ? remoteIncidents.filter(item => !previousIds.has(String(item.id)))
+    : [];
+  incidents = remoteIncidents;
+  fleet = remoteFleet;
+  activity = toList(data.activity);
+  latest = toList(data.latest);
+  const highestId = incidents.reduce((max, item) => Math.max(max, Number(item.id) || 0), 0);
+  next = Math.max(Number(data.next) || 1, highestId + 1);
+  render();
+  remoteStateInitialized = true;
+  newRemoteIncidents.forEach(item => notifyIncident(item, true));
+};
+
+const roads=[['Zone A','Zone B',5],['Zone A','Zone C',10],['Zone B','Zone C',3],['Zone B','Zone D',7],['Zone C','Zone D',2]];
+function sev(d){return d.trapped>=50||d.injured>=100||d.affected>=1000?'CRITICAL':d.trapped>=20||d.injured>=50||d.affected>=500?'HIGH':d.trapped>=5||d.injured>=10||d.affected>=100?'MEDIUM':'LOW'}function rank(s){return {CRITICAL:4,HIGH:3,MEDIUM:2,LOW:1}[s]}
+function path(s,t){let dist={},prev={},left=new Set(['Zone A','Zone B','Zone C','Zone D']);left.forEach(x=>dist[x]=Infinity);dist[s]=0;while(left.size){let u=[...left].sort((a,b)=>dist[a]-dist[b])[0];left.delete(u);if(!isFinite(dist[u]))break;for(let [a,b,w] of roads){let v=a===u?b:b===u?a:null;if(v&&left.has(v)&&dist[u]+w<dist[v]){dist[v]=dist[u]+w;prev[v]=u}}}if(!isFinite(dist[t]))return null;let p=[t];while(p[0]!==s)p.unshift(prev[p[0]]);return {p,km:dist[t]}}
+function required(t){return t==='Fire'?'Fire Truck':t==='Medical Emergency'?'Ambulance':'Rescue Team'}function log(t,d){activity.unshift({t,d});activity=activity.slice(0,7)}function dispatch(){let q=incidents.filter(d=>d.status==='PENDING').sort((a,b)=>rank(sev(b))-rank(sev(a))||a.id-b.id);for(let d of q){let choices=fleet.map((r,i)=>({r,i,route:path(r.zone,d.zone)})).filter(x=>x.r.available&&x.r.type===required(d.type)&&x.route).sort((a,b)=>a.route.km-b.route.km);if(!choices.length)continue;let x=choices[0];x.r.available=false;x.r.incident=d.id;d.status='ASSIGNED';d.resource=x.r.id;d.route=x.route.p;d.km=x.route.km;latest=d.route;log('Resource dispatched',`#${x.r.id} → incident #${d.id}: ${d.route.join(' → ')} (${d.km} km)`)} }
+function add(d){d.id=next++;d.status='PENDING';incidents.push(d);log('Incident reported',`#${d.id} ${d.type} in ${d.zone} · ${sev(d)}`);dispatch();scheduleAutoCompletions();render();window.aidrisSaveSharedState?.();notifyIncident(d, false)}function complete(id){let d=incidents.find(x=>x.id===id);if(!d||d.status!=='ASSIGNED')return;let r=fleet.find(x=>x.id===d.resource);r.available=true;r.zone=d.zone;r.incident=null;d.status='COMPLETED';log('Mission completed',`Incident #${id}; resource #${r.id} released at ${r.zone}`);delete simMissionTimers[id];dispatch();scheduleAutoCompletions();render();window.aidrisSaveSharedState?.();toast('Mission completed; pending incidents retried.')}
+function retry(){dispatch();scheduleAutoCompletions();render();window.aidrisSaveSharedState?.();toast('Pending incidents checked against available resources.')}function tag(s){return `<span class="tag ${s}">${s}</span>`}function render(){total.textContent=incidents.length;
+const availableCount=fleet.filter(x=>x.available).length, deployedCount=fleet.length-availableCount;
+const readyPct=fleet.length?Math.round(availableCount/fleet.length*100):0, activePct=fleet.length?Math.round(deployedCount/fleet.length*100):0;
+document.getElementById('readyPct').textContent=readyPct+'%';document.getElementById('activePct').textContent=activePct+'%';
+document.getElementById('readyLabel').textContent=availableCount+' of '+fleet.length+' units';document.getElementById('activeLabel').textContent=deployedCount+' of '+fleet.length+' units';
+document.getElementById('readyRing').style.background=`conic-gradient(var(--amber) ${readyPct*3.6}deg,#3b4a50 0deg)`;
+document.getElementById('activeRing').style.background=`conic-gradient(var(--teal) ${activePct*3.6}deg,#3b4a50 0deg)`;
+document.getElementById('loadNumber').textContent=incidents.length;document.getElementById('resolvedMini').textContent=incidents.filter(x=>x.status==='COMPLETED').length;
+document.getElementById('loadMeter').style.width=Math.min(100,incidents.length*10)+'%';
+const counts=['CRITICAL','HIGH','MEDIUM','LOW'].map(s=>incidents.filter(d=>sev(d)===s).length);
+document.getElementById('riskCounts').innerHTML=['CRITICAL','HIGH','MEDIUM','LOW'].map((s,i)=>`<div class="risk-row"><i class="risk-dot ${s.toLowerCase()}"></i><span>${s}</span><b>${counts[i]}</b></div>`).join('');
+const cats=['Flood','Fire','Earthquake','Medical Emergency'],labels=['FLOOD','FIRE','QUAKE','MEDICAL'],maxCat=Math.max(1,...cats.map(c=>incidents.filter(d=>d.type===c).length));
+document.getElementById('categoryChart').innerHTML=cats.map((c,i)=>`<div class="bar-col"><i style="height:${Math.max(4,incidents.filter(d=>d.type===c).length/maxCat*92)}%"></i><span>${labels[i]}</span><small style="color:#dce9e6;font-size:9px">${incidents.filter(d=>d.type===c).length}</small></div>`).join('');pending.textContent=incidents.filter(x=>x.status==='PENDING').length;deployed.textContent=fleet.filter(x=>!x.available).length;done.textContent=incidents.filter(x=>x.status==='COMPLETED').length;let q=incidents.filter(x=>x.status==='PENDING').sort((a,b)=>rank(sev(b))-rank(sev(a))||a.id-b.id);priority.innerHTML=q.length?q.map(d=>`<tr><td>#${d.id}</td><td>${d.type}</td><td>${d.zone}</td><td>${tag(sev(d))}</td><td>${tag(d.status)}</td></tr>`).join(''):'<tr><td colspan="5" class="muted">No pending incidents</td></tr>';let f=document.getElementById('filter')?.value||'ALL';let rows=incidents.filter(x=>f==='ALL'||x.status===f);let sortMode=document.getElementById('severitySort')?.value||'high';if(sortMode==='high')rows.sort((a,b)=>rank(sev(b))-rank(sev(a))||a.id-b.id);else if(sortMode==='low')rows.sort((a,b)=>rank(sev(a))-rank(sev(b))||a.id-b.id);incRows.innerHTML=rows.length?rows.map(d=>`<tr><td>#${d.id}</td><td>${d.type}</td><td>${d.zone}</td><td>${tag(sev(d))}</td><td>${tag(d.status)}</td><td>${d.resource||'—'}</td><td>${d.status==='ASSIGNED'?`<button class="btn" onclick="complete(${d.id})">Complete</button>`:'—'}</td></tr>`).join(''):'<tr><td colspan="7">No incidents</td></tr>';document.getElementById('fleet').innerHTML=fleet.map(r=>`<div class="card"><b>${r.type} #${r.id}</b><p class="muted">Location: ${r.zone}</p>${r.available?tag('COMPLETED'):tag('ASSIGNED')}<p class="muted">${r.available?'Ready for dispatch':'On incident #'+r.incident}</p></div>`).join('');activity.innerHTML=activity.length?activity.map(x=>`<div>• <b>${x.t}</b><br><span class="muted">${x.d}</span></div>`).join(''):'No activity yet';updateCityMap()}
+let cityMap=null, zoneMarkers={};
+const patialaZones={"Zone A":{lat:30.3398,lng:76.3869,label:"Patiala city centre"},"Zone B":{lat:30.3560,lng:76.3980,label:"North Patiala (demo anchor)"},"Zone C":{lat:30.3230,lng:76.3910,label:"South Patiala (demo anchor)"},"Zone D":{lat:30.3410,lng:76.4200,label:"East Patiala (demo anchor)"}};
+function initCityMap(){if(cityMap||!window.L)return;cityMap=L.map('cityMap').setView([30.3398,76.3869],13);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}).addTo(cityMap);Object.entries(patialaZones).forEach(([zone,p])=>{zoneMarkers[zone]=L.marker([p.lat,p.lng]).addTo(cityMap).bindPopup('<b>'+zone+'</b><br>'+p.label+'<br>Demo location — replace with verified incident GPS coordinates.');});updateCityMap();}
+function updateCityMap(){if(!cityMap)return;Object.entries(patialaZones).forEach(([zone,p])=>{const n=incidents.filter(d=>d.zone===zone).length;zoneMarkers[zone].setPopupContent('<b>'+zone+'</b><br>'+p.label+'<br>Incidents: '+n+'<br>Demo zone anchor, not an exact incident pin.');});}
+let toastTimer=null;
+function toast(s){let t=document.getElementById('toast');t.className='toast show';t.textContent=s;t.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>{t.classList.remove('show');t.style.display='none'},3200)}
+function notifyIncident(d, remote=false){
+  const level=sev(d), box=document.getElementById('toast');
+  if(!box)return;
+  box.className='toast show '+level;
+  box.innerHTML=`<div class="toast-title">${level} ${remote?'· NEW REMOTE ALERT':'· NEW INCIDENT'}</div><div class="toast-detail">Incident #${d.id}: ${d.type} reported in ${d.zone}. ${d.affected} affected · ${d.injured} injured · ${d.trapped} trapped.</div>`;
+  box.style.display='block';
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>{box.classList.remove('show');box.style.display='none'},6500);
+}function go(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(p).classList.add('active');document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===p));title.textContent=({dashboard:'Command overview',register:'Report a disaster',incidents:'Disaster board',resources:'Emergency fleet',network:'City network',source:'C++ source explorer'})[p]}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{go(b.dataset.page);if(b.dataset.page==='dashboard'){setTimeout(()=>{initCityMap();cityMap?.invalidateSize()},80)}});form.onsubmit=e=>{e.preventDefault();add({type:type.value,zone:zone.value,affected:+affected.value,injured:+injured.value,trapped:+trapped.value});go('incidents')};function preview(){previewEl.value='';}const previewEl=document.getElementById('preview');['affected','injured','trapped'].forEach(id=>document.getElementById(id).oninput=()=>{previewEl.value=sev({affected:+affected.value,injured:+injured.value,trapped:+trapped.value})});previewEl.value='MEDIUM';function demo(){add({type:'Fire',zone:'Zone D',affected:350,injured:55,trapped:2});add({type:'Earthquake',zone:'Zone D',affected:1200,injured:110,trapped:55});add({type:'Flood',zone:'Zone C',affected:600,injured:20,trapped:25});go('incidents')}function resetAll(){if(!confirm('Reset all demo incidents and resources?'))return;incidents=[];fleet=[{id:101,type:'Ambulance',zone:'Zone A',available:true},{id:102,type:'Fire Truck',zone:'Zone B',available:true},{id:103,type:'Rescue Team',zone:'Zone C',available:true}];activity=[];next=1;latest=[];render();window.aidrisSaveSharedState?.()}
+let selected='main.cpp';function filterFiles(){let q=searchFiles.value.toLowerCase();filelist.innerHTML=Object.keys(SOURCE).filter(n=>(n+' '+SOURCE[n].desc).toLowerCase().includes(q)).map(n=>`<button class="filebtn ${n===selected?'active':''}" onclick="showFile('${n}')">${n}<div class="muted" style="font-size:10px">${SOURCE[n].desc}</div></button>`).join('')||'<p class="muted">No matching file</p>'}function showFile(n){selected=n;filename.textContent=n;filepath.textContent='AIDRIS_Web/cpp/'+n;filedesc.textContent=SOURCE[n].desc;code.textContent=SOURCE[n].code;downloadFile.href='cpp/'+n;filterFiles()}function copyCode(){navigator.clipboard?.writeText(SOURCE[selected].code).then(()=>toast('Code copied.')).catch(()=>toast('Clipboard unavailable.'))}
+// Surprise simulation: a random disaster is generated after a random delay.
+let simRunning=false,simTimer=null,simEvents=0,simMissionTimers={};
+const simTypes=['Flood','Fire','Earthquake','Medical Emergency'];
+function randomInt(min,max){return Math.floor(Math.random()*(max-min+1))+min}
+function simulationDelay(){const pace=document.getElementById('simPace').value;return pace==='slow'?randomInt(18000,35000):pace==='fast'?randomInt(4000,10000):randomInt(9000,22000)}
+function simSay(title,detail){const box=document.getElementById('simFeed');const item=document.createElement('div');item.className='sim-event';item.innerHTML='<b>'+title+'</b><small>'+detail+' · '+new Date().toLocaleTimeString()+'</small>';box.prepend(item);while(box.children.length>8)box.removeChild(box.lastChild)}
+function randomDisaster(){const type=simTypes[randomInt(0,simTypes.length-1)],zone=['Zone A','Zone B','Zone C','Zone D'][randomInt(0,3)];let affected,injured,trapped;const profile=randomInt(1,100);if(profile<=12){affected=randomInt(1000,2400);injured=randomInt(100,260);trapped=randomInt(50,120)}else if(profile<=35){affected=randomInt(500,999);injured=randomInt(50,99);trapped=randomInt(20,49)}else if(profile<=72){affected=randomInt(100,499);injured=randomInt(10,49);trapped=randomInt(5,19)}else{affected=randomInt(5,99);injured=randomInt(0,9);trapped=randomInt(0,4)}return{type,zone,affected,injured,trapped}}
+function scheduleAutoCompletions(){if(!document.getElementById('autoComplete')?.checked)return;incidents.filter(d=>d.status==='ASSIGNED'&&!simMissionTimers[d.id]).forEach(d=>{simMissionTimers[d.id]=setTimeout(()=>{const live=incidents.find(x=>x.id===d.id);if(live&&live.status==='ASSIGNED'){complete(d.id);simSay('✓ RESPONSE COMPLETED','Incident #'+d.id+' closed; its resource has returned to service.')}delete simMissionTimers[d.id]},randomInt(12000,26000))})}
+function scheduleNextDisaster(){if(!simRunning)return;simTimer=setTimeout(()=>{if(!simRunning)return;const d=randomDisaster();add(d);simEvents++;simSay('⚠ UNANNOUNCED INCIDENT #'+(next-1),d.type+' in '+d.zone+' · '+sev(d)+' · '+d.affected+' affected, '+d.injured+' injured, '+d.trapped+' trapped');scheduleAutoCompletions();scheduleNextDisaster()},simulationDelay())}
+function updateSimUI(){const dot=document.getElementById('simDot'),status=document.getElementById('simStatus'),start=document.getElementById('simStart'),pause=document.getElementById('simPause');dot.classList.toggle('running',simRunning);status.textContent=simRunning?'SIMULATION RUNNING':'SIMULATION PAUSED';start.disabled=simRunning;pause.disabled=!simRunning;start.textContent=simEvents?'▶ Resume surprise simulation':'▶ Start surprise simulation'}
+function startSimulation(){if(simRunning)return;simRunning=true;updateSimUI();simSay('Simulation started','Random incident times and types are hidden. Stay alert.');scheduleNextDisaster();toast('Surprise simulation started.')}
+function pauseSimulation(){if(!simRunning)return;simRunning=false;clearTimeout(simTimer);updateSimUI();simSay('Simulation paused','No new incidents will appear until resumed. Existing missions remain in their current state.');toast('Simulation paused.')}
+render();filterFiles();showFile('main.cpp');
+</script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-app.js";
+import { getDatabase, ref, onValue, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCgs69cxDJMP48EEY5IBfBF0_XnM-9pe5c",
+  authDomain: "disaster-managemnet-prototype.firebaseapp.com",
+  databaseURL: "https://disaster-managemnet-prototype-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "disaster-managemnet-prototype",
+  storageBucket: "disaster-managemnet-prototype.firebasestorage.app",
+  messagingSenderId: "841375456458",
+  appId: "1:841375456458:web:70d137c120fb1c8ee9a833",
+  measurementId: "G-8L72Y3GSBY"
+};
+
+const statusEl = document.getElementById("firebaseSyncStatus");
+const statusText = statusEl?.querySelector("span");
+function showStatus(kind, message) {
+  if (!statusEl) return;
+  statusEl.classList.remove("connected", "error");
+  if (kind) statusEl.classList.add(kind);
+  if (statusText) statusText.textContent = message;
+}
+
+try {
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const sharedRef = ref(db, "aidris/sharedState");
+  let applyingRemote = false;
+  let writeInProgress = false;
+  let pendingWrite = false;
+
+  window.aidrisSaveSharedState = async () => {
+    if (applyingRemote || !window.aidrisGetSharedState) return;
+    if (writeInProgress) { pendingWrite = true; return; }
+    writeInProgress = true;
+    try {
+      const state = window.aidrisGetSharedState();
+      await set(sharedRef, { ...state, updatedAt: serverTimestamp() });
+      showStatus("connected", "Connected · changes shared live");
+    } catch (error) {
+      console.error("AIDRIS database write failed:", error);
+      showStatus("error", "Sync failed · check Firebase database rules");
+    } finally {
+      writeInProgress = false;
+      if (pendingWrite) {
+        pendingWrite = false;
+        window.aidrisSaveSharedState();
+      }
+    }
+  };
+
+  onValue(sharedRef, (snapshot) => {
+    const remoteState = snapshot.val();
+    if (remoteState && window.aidrisApplySharedState) {
+      applyingRemote = true;
+      window.aidrisApplySharedState(remoteState);
+      applyingRemote = false;
+      showStatus("connected", "Connected · shared updates live");
+    } else {
+      showStatus("connected", "Connected · creating shared workspace");
+      window.aidrisSaveSharedState();
+    }
+  }, (error) => {
+    console.error("AIDRIS database read failed:", error);
+    showStatus("error", "Database access failed · check Rules tab");
+  });
+} catch (error) {
+  console.error("Firebase initialization failed:", error);
+  showStatus("error", "Firebase connection failed · check configuration");
+}
+</script>
+
+</body></html>

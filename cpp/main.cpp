@@ -1,0 +1,3 @@
+#include <iostream>
+#include "DisasterManager.h"
+int main(){ DisasterManager aidris; int c=0; do { std::cout<<"\nAIDRIS DISASTER RESPONSE\n1. Register demo incident\n2. Show incidents (default)\n3. Show resources\n4. Complete mission\n5. Show incidents sorted by severity\n0. Exit\nChoice: "; std::cin>>c; if(c==1){ std::string t,z; int a,i,tr; std::cout<<"Type (Fire/Flood/Earthquake/Medical Emergency): ";std::cin>>t;std::cout<<"Zone (A/B/C/D): ";std::cin>>z;std::cout<<"Affected injured trapped: ";std::cin>>a>>i>>tr;aidris.report(t,a,i,tr,"Zone "+z);} else if(c==2)aidris.showDisasters(); else if(c==3)aidris.showResources(); else if(c==5)aidris.showDisastersSorted(); else if(c==4){int id;std::cout<<"Incident ID: ";std::cin>>id;aidris.complete(id);} }while(c!=0); }
